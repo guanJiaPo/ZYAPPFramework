@@ -1,0 +1,18 @@
+//
+//  ZYPrefixHeader.pch
+//  ZYAPPFramework
+//
+//  Created by szy on 2019/1/21.
+//  Copyright © 2019 szy. All rights reserved.
+//
+
+#ifndef ZYPrefixHeader_pch
+#define ZYPrefixHeader_pch
+
+#import "ZYCategoryConstants.h"
+#import "ZYFileHeaderConstants.h"
+#import "ZYConstConstants.h"
+#import "ZYDefineConstants.h"
+#import "ZYNetworkConstants.h"
+
+#endif /* ZYPrefixHeader_pch */
