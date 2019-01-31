@@ -21,18 +21,18 @@
     self.subViewMargin = 10;
     //标题
     self.titleLabFont = [UIFont systemFontOfSize:16];
-    self.titleLabTextColor = [UIColor colorWithHexString:@"#333333"];
+    self.titleLabTextColor = kHexColor(0x333333);
 
     //描述字体
     self.detailLabFont = [UIFont systemFontOfSize:14];
-    self.detailLabTextColor = [UIColor colorWithHexString:@"#999999"];
+    self.detailLabTextColor = kHexColor(0x999999);
 
     //按钮
     self.actionBtnCornerRadius = 4;
-    self.actionBtnBorderColor = [UIColor colorWithHexString:@"#e0e0e0"];
+    self.actionBtnBorderColor = kHexColor(0xe0e0e0);
     self.actionBtnBorderWidth = 1;
-    self.actionBtnTitleColor = [UIColor colorWithHexString:@"#333333"];
-    self.actionBtnBackGroundColor = [UIColor colorWithHexString:@"#f7f9fc"];
+    self.actionBtnTitleColor = kHexColor(0x333333);
+    self.actionBtnBackGroundColor = kHexColor(0xf7f9fc);
 }
 
 #pragma mark - 默认空数据样式

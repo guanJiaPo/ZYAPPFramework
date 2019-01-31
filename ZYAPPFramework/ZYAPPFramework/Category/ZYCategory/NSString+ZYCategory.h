@@ -49,8 +49,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否包含表情
 - (BOOL)isContainsEmoji;
 
+/// 去掉两端的空格
+- (NSString *)stringByTrim;
+
 /// 千位分割
 + (NSString *)stringFormatterBehavior10_4:(NSInteger)number;
+
+/// url中文及特殊字符转码
++ (NSString *)urlEncode:(NSString *)originalStr;
+
+/// 转换成二进制数据
+- (NSData *)toData;
 
 /// base64加密
 + (NSString *)encodeForBase64:(NSString *)string;
@@ -58,16 +67,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// base64解密
 + (NSString *)dencodeForBase64:(NSString *)base64String;
 
-/// url中文及特殊字符转码
-+ (NSString *)urlEncode:(NSString *)originalStr;
+/// md5加密
+- (NSString *)md5;
 
 /// 转拼音
 - (NSString *)pinyin;
 /// 首字母
 - (NSString *)firstLetter;
 
-/// md5加密
-- (NSString *)md5;
+
 
 @end
 

@@ -101,7 +101,7 @@
                       flexibleSpace,
                       nil];
     self.navigationController.toolbar.barStyle = self.navigationController.navigationBar.barStyle;
-    self.navigationController.toolbar.tintColor = [UIColor colorWithHexString:@"0x3bbd79"];
+    self.navigationController.toolbar.tintColor = kHexColor(0x3bbd79);
     self.toolbarItems = items;
 }
 
@@ -292,7 +292,7 @@
         CGRect navigaitonBarBounds = self.navigationController.navigationBar.bounds;
         CGRect frame = CGRectMake(0, navigaitonBarBounds.size.height, navigaitonBarBounds.size.width, progressBarHeight);
         _progressView = [[UIProgressView alloc] initWithFrame:frame];
-        _progressView.tintColor = [UIColor colorWithHexString:@"#4A6AFF"];
+        _progressView.tintColor = kHexColor(0x4A6AFF);
         _progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     }
     return _progressView;

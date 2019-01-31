@@ -48,7 +48,7 @@
         UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal", [tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         
-        item.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        item.backgroundColor = kHexColor(0xffffff);
         
         [item setTitle:[tabBarItemTitles objectAtIndex:index]];
         item.unselectedTitleAttributes = @{NSForegroundColorAttributeName : kHexColor(0x9092a5), NSFontAttributeName : [UIFont systemFontOfSize:12]};

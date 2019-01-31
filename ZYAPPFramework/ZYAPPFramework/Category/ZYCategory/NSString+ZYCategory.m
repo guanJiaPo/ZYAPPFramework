@@ -176,6 +176,11 @@
     return returnValue;
 }
 
+/// 去掉两端的空格
+- (NSString *)stringByTrim {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    return [self stringByTrimmingCharactersInSet:set];
+}
 
 /// 千位分割
 + (NSString *)stringFormatterBehavior10_4:(NSInteger)number {
@@ -183,21 +188,6 @@
     [numberFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
     [numberFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
     return [numberFormatter stringFromNumber:[NSNumber numberWithInteger:number]];
-}
-
-/// base64加密
-+ (NSString *)encodeForBase64:(NSString *)string {
-    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *base64String = [data base64EncodedStringWithOptions:0];
-    return base64String;
-}
-
-/// base64解密
-+ (NSString *)dencodeForBase64:(NSString *)base64String {
-    NSData *data = [[NSData alloc]initWithBase64EncodedString:base64String options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    
-    return string;
 }
 
 /// url中文及特殊字符转码
@@ -208,6 +198,35 @@
     NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
     NSString *encodedString = [originalStr stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
     return encodedString;
+}
+
+/// 转换成二进制数据
+- (NSData *)toData {
+    if ([NSString isEmpty:self]) {
+        return nil;
+    }
+    return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+/// base64加密
++ (NSString *)encodeForBase64:(NSString *)string {
+    if ([NSString isEmpty:string]) {
+        return nil;
+    }
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *base64String = [data base64EncodedStringWithOptions:0];
+    return base64String;
+}
+
+/// base64解密
++ (NSString *)dencodeForBase64:(NSString *)base64String {
+    if ([NSString isEmpty:base64String]) {
+        return nil;
+    }
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:base64String options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    
+    return string;
 }
 
 /// md5加密

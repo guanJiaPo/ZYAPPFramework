@@ -22,7 +22,7 @@
 #import "IQKeyboardManager.h"
 #import "JKDBModel.h"
 #import "MDHTMLLabel.h"
-#import "YYCategories.h"
+#import "ZYSystem.h"
 
 /***************** Category ***************************/
 
