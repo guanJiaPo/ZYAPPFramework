@@ -80,7 +80,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setCornerRadius:(CGFloat)cornerRadius roundingCorner:(UIRectCorner)corner size:(CGSize)size;
 
-- (void)setCornerRadius:(CGFloat)cornerRadius roundingCorner:(UIRectCorner)corner size:(CGSize)size borderColor:(UIColor *)borderColor;
 
 @end
 

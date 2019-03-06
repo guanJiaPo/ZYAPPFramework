@@ -68,9 +68,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 调用发短信功能（此种方法会直接跳转到给指定号码发送短信,短信结束后会留在短信界面）
 + (void)openSendSMSWithPhone:(NSString *)phone;
 
-/// 调用Safari浏览器功能
-+ (void)openSafari:(NSString *)urlString;
-
 /// 跳转到定位服务
 + (void)openLocationService;
 

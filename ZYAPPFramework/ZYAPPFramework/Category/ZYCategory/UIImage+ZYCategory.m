@@ -36,11 +36,9 @@
     
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     
-    // draw alpha-mask
     CGContextSetBlendMode(context, kCGBlendModeNormal);
     CGContextDrawImage(context, rect, self.CGImage);
     
-    // draw tint color, preserving alpha values of original image
     CGContextSetBlendMode(context, kCGBlendModeSourceIn);
     [tintColor setFill];
     CGContextFillRect(context, rect);
@@ -86,7 +84,7 @@
  @param borderColor 边框颜色
  @return 带圆角和边框的image
  */
-- (UIImage *)setCornerRadius:(CGFloat)radius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+- (UIImage *)setCornerRadius:(CGFloat)radius borderWidth:(CGFloat)borderWidth borderColor:( UIColor *)borderColor {
     return [self setCornerRadius:radius corners:UIRectCornerAllCorners borderWidth:borderWidth borderColor:borderColor];
 }
 

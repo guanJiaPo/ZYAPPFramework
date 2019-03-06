@@ -99,27 +99,27 @@
 
 /// 主题色
 #ifndef kThemeColor
-#define kThemeColor kHRGB(0x4A6AFF)
+#define kThemeColor kHexColor(0x4A6AFF)
 #endif
 
 /// 主标题色
 #ifndef kTitleColor
-#define kTitleColor kHRGB(0x383838)
+#define kTitleColor kHexColor(0x383838)
 #endif
 
 /// 副标题色
 #ifndef kSubTitleColor
-#define kSubTitleColor kHRGB(0x9092a5)
+#define kSubTitleColor kHexColor(0x9092a5)
 #endif
 
 /// 分割线
 #ifndef kLineColor
-#define kLineColor kHRGB(0xC2CADC)
+#define kLineColor kHexColor(0xC2CADC)
 #endif
 
 /// 白色
 #ifndef kWhiteColor
-#define kWhiteColor kHRGB(0xffffff)
+#define kWhiteColor kHexColor(0xffffff)
 #endif
 
 #ifndef weakify

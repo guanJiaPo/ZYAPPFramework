@@ -21,6 +21,7 @@
 #import <netdb.h>
 #import <netinet/ip.h>
 #import <net/ethernet.h>
+#import <Photos/Photos.h>
 
 #define MDNS_PORT       5353
 #define QUERY_NAME      "_apple-mobdev2._tcp.local"
@@ -231,6 +232,9 @@
 
 /// 获取设备mac物理地址(比较耗时)
 + (NSString *)getMacAddress {
+#if TARGET_IPHONE_SIMULATOR
+    return nil;
+#else
     res_9_init();
     int len;
     //get currnet ip address
@@ -294,10 +298,12 @@
     }//end for each
     macAddress = macAddress ? macAddress : DUMMY_MAC_ADDR;
     return macAddress;
+    #endif
 }//end getMacAddressFromMDNS
 
 /// 设备物理地址（随机生成）
 + (NSString *)macArcAddress {
+
     int mib[6];
     size_t len;
     char *buf;
@@ -388,7 +394,7 @@
 
 #pragma mark - 系统权限获取
 
-/// 相机是否权限
+/// 相机权限
 + (BOOL)cameraAccessAuthorized {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [self showTip:@"该设备不支持拍照"];
@@ -404,15 +410,14 @@
     }
 }
 
-/// 照片(相册)是否权限
+/// 照片(相册)权限
 + (BOOL)photoLibraryAccessAuthorized {
-    ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-    if (authStatus == ALAuthorizationStatusRestricted || authStatus == ALAuthorizationStatusDenied) {
+    PHAuthorizationStatus status = PHPhotoLibrary.authorizationStatus;
+    if (status == PHAuthorizationStatusRestricted || status == PHAuthorizationStatusDenied) {
         [self showTip:@"请在iPhone的“设置->隐私->照片”中打开本应用的访问权限"];
         return NO;
-    } else {
-        return YES;
     }
+    return YES;
 }
 
 /// 发短信权限
@@ -427,35 +432,28 @@
 
 /// 调用打电话功能（此种方法会直接进行拨打电话,电话结束后会留在电话界面）
 + (void)openTelphone:(NSString *)phone {
-    if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",phone]]]) {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",phone]]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",phone]]];
     }
 }
 
 /// 调用打电话功能（此种方法会询问是否拨打电话,电话结束后会返回到应用界面,但是有上架App Store被拒的案例）
 + (void)openTelpromptPhone:(NSString *)phone {
-    if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phone]]]) {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phone]]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phone]]];
     }
 }
 
 /// 调用发短信功能（此种方法会直接跳转到给指定号码发送短信,短信结束后会留在短信界面）
 + (void)openSendSMSWithPhone:(NSString *)phone {
-    if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"sms://%@",phone]]]) {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"sms://%@",phone]]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"sms://%@",phone]]];
-    }
-}
-
-/// 调用Safari浏览器功能
-+ (void)openSafari:(NSString *)urlString {
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
     }
 }
 
 /// 跳转到定位服务
 + (void)openLocationService {
-    if ([[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationLaunchOptionsLocationKey]]) {
+    if ([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:UIApplicationLaunchOptionsLocationKey]]) {
         [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationLaunchOptionsLocationKey]];
     }
 }
