@@ -29,12 +29,12 @@
     [backButton setImage:[UIImage imageNamed:@"navigation_back_highlighted"] forState:UIControlStateHighlighted];
     [backButton setFrame:CGRectMake(0, 0, 44, 44)];
     [backButton addTarget:self action:@selector(backItemAction) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    negativeSpacer.width = kScreenWidth > 375 ? -20 : -16;
+    UIBarButtonItem *negativeSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpace.width = kScreenWidth > 375 ? -20 : -16;
     UIView *backView = [[UIView alloc] initWithFrame:backButton.bounds];
     [backView addSubview:backButton];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
-    self.navigationItem.leftBarButtonItems = @[negativeSpacer, leftBarButtonItem];
+    self.navigationItem.leftBarButtonItems = @[negativeSpace, leftBarButtonItem];
 }
 
 /// 返回按钮

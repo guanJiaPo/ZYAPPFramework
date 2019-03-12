@@ -625,9 +625,9 @@
 			children = (
 				5102638B22019C5200851165 /* ZYWebViewController.bundle */,
 				5119894121F5C6ED00130E4F /* ZYWebNativeController.h */,
-				5119894221F5C6ED00130E4F /* ZYWebViewController.m */,
 				5119894321F5C6ED00130E4F /* ZYWebNativeController.m */,
 				5119894421F5C6ED00130E4F /* ZYWebViewController.h */,
+				5119894221F5C6ED00130E4F /* ZYWebViewController.m */,
 			);
 			path = ZYWKWebView;
 			sourceTree = "<group>";
