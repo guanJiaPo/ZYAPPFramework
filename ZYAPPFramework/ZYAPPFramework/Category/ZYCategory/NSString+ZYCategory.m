@@ -95,11 +95,9 @@
     if ([NSString isEmpty:self]) {
         return false;
     }
-    NSString *string = [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
-    if(string.length > 0) {
-        return NO;
-    }
-    return YES;
+    NSString *regex = @"[0-9]*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [predicate evaluateWithObject:self];
 }
 
 /// 是否为纯字母
@@ -107,8 +105,9 @@
     if ([NSString isEmpty:self]) {
         return false;
     }
-    NSCharacterSet *blockedCharacters = [[NSCharacterSet letterCharacterSet] invertedSet];
-    return ([self rangeOfCharacterFromSet:blockedCharacters].location == NSNotFound);
+    NSString *regex = @"[a-zA-Z]*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [predicate evaluateWithObject:self];
 }
 
 /// 只包含数字和字母
@@ -116,25 +115,49 @@
     if ([NSString isEmpty:self]) {
         return false;
     }
-    NSCharacterSet *blockedCharacters = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
-    return ([self rangeOfCharacterFromSet:blockedCharacters].location == NSNotFound);
+    NSString *regex = @"[a-zA-Z0-9]*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [predicate evaluateWithObject:self];
 }
 
-/// 只包含数字和 .
+/// 只包含数字和.
 - (BOOL)isPureNumbersOrPoint {
-    NSCharacterSet *numbers = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789."] invertedSet];
-    return ([self rangeOfCharacterFromSet:numbers].location == NSNotFound);
-}
-
-/// 正则匹配用户密码6-18位数字和字母组合
-- (BOOL)checkPasswordFor6_18 {
     if ([NSString isEmpty:self]) {
         return false;
     }
-    NSString *pattern =@"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{6,18}";
+    NSString *regex = @"[0-9.]*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [predicate evaluateWithObject:self];
+}
+
+/// n-m位数字和字母组合
+- (BOOL)checkNumOrLetStrForN:(NSInteger)n toM:(NSInteger)m {
+    if ([NSString isEmpty:self]) {
+        return false;
+    }
+    if (n > m) {
+        NSInteger temp = n;
+        n = m;
+        m = temp;
+    }
+    NSString *pattern = [NSString stringWithFormat: @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{%td,%td}",n,m];
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",pattern];
     BOOL isMatch = [pred evaluateWithObject:self];
     return isMatch;
+}
+
+/// 是否包含中文
+- (BOOL)isContainsChinese {
+    if ([NSString isEmpty:self]) {
+        return false;
+    }
+    for(int i = 0; i < self.length; i++){
+        int a = [self characterAtIndex:i];
+        if (a > 0x4e00 && a < 0x9fff) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 /// 是否包含表情
@@ -243,16 +266,23 @@
 /// 转拼音
 - (NSString *)pinyin {
     NSMutableString *source = [self mutableCopy];
+    //转化为带声调的拼音
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
+    //转化为不带声调
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripCombiningMarks, NO);
-    return [source capitalizedString];
+    //去除空格
+    return [source stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 /// 首字母
 - (NSString *)firstLetter {
     NSString *pinyin = [self pinyin];
     if (![NSString isEmpty:pinyin]) {
-        return [[pinyin substringWithRange:NSMakeRange(0, 1)] uppercaseString];
+        NSString *first = [pinyin substringWithRange:NSMakeRange(0, 1)];
+        if ([first isPureLetters]) {
+            return first.uppercaseString;
+        }
+        return @"#";
     }
     return @"#";
 }

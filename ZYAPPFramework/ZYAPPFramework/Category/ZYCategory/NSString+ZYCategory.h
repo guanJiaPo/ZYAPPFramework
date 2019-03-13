@@ -43,9 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 只包含数字和 .
 - (BOOL)isPureNumbersOrPoint;
 
-/// 正则匹配用户密码6-18位数字和字母组合
-- (BOOL)checkPasswordFor6_18;
+/// n-m位数字和字母组合
+- (BOOL)checkNumOrLetStrForN:(NSInteger)n toM:(NSInteger)m;
 
+/// 是否包含中文
+- (BOOL)isContainsChinese;
 /// 是否包含表情
 - (BOOL)isContainsEmoji;
 
