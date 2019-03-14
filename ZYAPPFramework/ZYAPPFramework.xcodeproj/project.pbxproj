@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391C1B9B223A5A730044ECAF /* UIImageView+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B92223A5A730044ECAF /* UIImageView+JMRadius.m */; };
+		391C1B9C223A5A730044ECAF /* UIImage+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B94223A5A730044ECAF /* UIImage+JMRadius.m */; };
+		391C1B9D223A5A730044ECAF /* UIButton+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B95223A5A730044ECAF /* UIButton+JMRadius.m */; };
+		391C1B9E223A5A730044ECAF /* UIView+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B96223A5A730044ECAF /* UIView+JMRadius.m */; };
 		44861C77EDF6EEB6895C2F0F /* libPods-ZYAPPFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE2700B6C2C71735CAE4D88 /* libPods-ZYAPPFramework.a */; };
 		510263842201411F00851165 /* NSObject+ZYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 510263832201411F00851165 /* NSObject+ZYCategory.m */; };
 		5102638A2201901D00851165 /* MBProgressHUD+ZYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 510263892201901D00851165 /* MBProgressHUD+ZYCategory.m */; };
@@ -105,6 +109,15 @@
 
 /* Begin PBXFileReference section */
 		28229C1E99EC44B618D9FEEF /* Pods-ZYAPPFrameworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYAPPFrameworkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYAPPFrameworkUITests/Pods-ZYAPPFrameworkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		391C1B92223A5A730044ECAF /* UIImageView+JMRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JMRadius.m"; sourceTree = "<group>"; };
+		391C1B93223A5A730044ECAF /* JMRoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRoundedCorner.h; sourceTree = "<group>"; };
+		391C1B94223A5A730044ECAF /* UIImage+JMRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JMRadius.m"; sourceTree = "<group>"; };
+		391C1B95223A5A730044ECAF /* UIButton+JMRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JMRadius.m"; sourceTree = "<group>"; };
+		391C1B96223A5A730044ECAF /* UIView+JMRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMRadius.m"; sourceTree = "<group>"; };
+		391C1B97223A5A730044ECAF /* UIImageView+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JMRadius.h"; sourceTree = "<group>"; };
+		391C1B98223A5A730044ECAF /* UIImage+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JMRadius.h"; sourceTree = "<group>"; };
+		391C1B99223A5A730044ECAF /* UIView+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMRadius.h"; sourceTree = "<group>"; };
+		391C1B9A223A5A730044ECAF /* UIButton+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JMRadius.h"; sourceTree = "<group>"; };
 		45345E9D679C79D729C10C93 /* Pods-ZYAPPFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYAPPFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYAPPFrameworkTests/Pods-ZYAPPFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		510263822201411F00851165 /* NSObject+ZYCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZYCategory.h"; sourceTree = "<group>"; };
 		510263832201411F00851165 /* NSObject+ZYCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZYCategory.m"; sourceTree = "<group>"; };
@@ -300,6 +313,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		391C1B91223A5A730044ECAF /* JMRoundedCorner1.9.6 */ = {
+			isa = PBXGroup;
+			children = (
+				391C1B93223A5A730044ECAF /* JMRoundedCorner.h */,
+				391C1B99223A5A730044ECAF /* UIView+JMRadius.h */,
+				391C1B96223A5A730044ECAF /* UIView+JMRadius.m */,
+				391C1B94223A5A730044ECAF /* UIImage+JMRadius.m */,
+				391C1B98223A5A730044ECAF /* UIImage+JMRadius.h */,
+				391C1B9A223A5A730044ECAF /* UIButton+JMRadius.h */,
+				391C1B95223A5A730044ECAF /* UIButton+JMRadius.m */,
+				391C1B97223A5A730044ECAF /* UIImageView+JMRadius.h */,
+				391C1B92223A5A730044ECAF /* UIImageView+JMRadius.m */,
+			);
+			path = JMRoundedCorner1.9.6;
+			sourceTree = "<group>";
+		};
 		4BAE3679655D6A44AF95C1F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +626,7 @@
 		5119892521F5B94D00130E4F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				391C1B91223A5A730044ECAF /* JMRoundedCorner1.9.6 */,
 				5119894821F5C6ED00130E4F /* DXPopover */,
 				5119894521F5C6ED00130E4F /* FDFullscreenPopGesture */,
 				5119897F21F5C6EE00130E4F /* InsetsLabel */,
@@ -1058,6 +1088,7 @@
 				5119893F21F5C6BE00130E4F /* JKDBHelper.m in Sources */,
 				511989B021F5C6EE00130E4F /* NSBundle+TZImagePicker.m in Sources */,
 				5119892B21F5BAEC00130E4F /* ZYUser.m in Sources */,
+				391C1B9C223A5A730044ECAF /* UIImage+JMRadius.m in Sources */,
 				5119893821F5C6AD00130E4F /* ZYURLSessionManager.m in Sources */,
 				511989B521F5C6EE00130E4F /* TZImageManager.m in Sources */,
 				511988E121F5B55200130E4F /* main.m in Sources */,
@@ -1080,6 +1111,7 @@
 				511989C021F5C6EE00130E4F /* UIView+LYExtension.m in Sources */,
 				511989B121F5C6EE00130E4F /* UIView+Layout.m in Sources */,
 				51F5A292220288F400DC996E /* NSDate+ZYCategory.m in Sources */,
+				391C1B9E223A5A730044ECAF /* UIView+JMRadius.m in Sources */,
 				511989BA21F5C6EE00130E4F /* TZGifPhotoPreviewController.m in Sources */,
 				511989B921F5C6EE00130E4F /* TZLocationManager.m in Sources */,
 				5119893921F5C6AD00130E4F /* ZYHTTPSessionManager.m in Sources */,
@@ -1087,6 +1119,7 @@
 				511989BF21F5C6EE00130E4F /* UIView+Empty.m in Sources */,
 				511989CE21F5C6EE00130E4F /* UIColor+VTMagic.m in Sources */,
 				511988D321F5B55100130E4F /* AppDelegate.m in Sources */,
+				391C1B9D223A5A730044ECAF /* UIButton+JMRadius.m in Sources */,
 				511989C321F5C6EE00130E4F /* InsetsLabel.m in Sources */,
 				511989CD21F5C6EE00130E4F /* UIScrollView+VTMagic.m in Sources */,
 				511989AB21F5C6EE00130E4F /* ZYCycleScrollView.m in Sources */,
@@ -1103,6 +1136,7 @@
 				511989DE21F5CC4100130E4F /* NSString+ZYCategory.m in Sources */,
 				511989B821F5C6EE00130E4F /* TZImagePickerController.m in Sources */,
 				511989D821F5CB4700130E4F /* ZYNavigationController.m in Sources */,
+				391C1B9B223A5A730044ECAF /* UIImageView+JMRadius.m in Sources */,
 				511989B721F5C6EE00130E4F /* TZPhotoPreviewCell.m in Sources */,
 				51F5A2952202891300DC996E /* UIImage+ZYCategory.m in Sources */,
 				511989D121F5C6EE00130E4F /* ZYAlertBaseView.m in Sources */,
