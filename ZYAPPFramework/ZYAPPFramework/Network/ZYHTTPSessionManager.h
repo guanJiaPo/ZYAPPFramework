@@ -61,7 +61,7 @@
  *
  *  @param url        路径
  *  @param parameters 参数
- *  @param data       二进制文件
+ *  @param datas       二进制文件
  *  @param fileKey    上传到服务器，接受此文件的字段名
  *  @param fileName   文件名称
  *  @param mimeType   文件类型
@@ -70,7 +70,7 @@
  *  @param progress   上传进度
  */
 
-- (void)uploadData:(NSString *)url parameters:(NSDictionary *)parameters data:(NSData *)data fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void (^)(id response))success failure:(void (^)(NSError *error))failure;
+- (void)uploadData:(NSString *)url parameters:(NSDictionary *)parameters datas:(NSArray *)datas fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void (^)(id response))success failure:(void (^)(NSError *error))failure;
 
 - (void)uploadData:(ZYRequest *)request responseClass:(Class)clazz data:(NSData *)data fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void(^)(ZYResponse *response))success failure:(void (^)(NSError *error))failure;
 

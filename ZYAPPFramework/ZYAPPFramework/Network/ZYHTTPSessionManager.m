@@ -170,7 +170,7 @@ static ZYHTTPSessionManager *HTTPSessionManager = nil;
  *
  *  @param url        路径
  *  @param parameters 参数
- *  @param data       二进制文件
+ *  @param datas       二进制文件
  *  @param fileKey    上传到服务器，接受此文件的字段名
  *  @param fileName   文件名称
  *  @param mimeType   文件类型
@@ -179,12 +179,14 @@ static ZYHTTPSessionManager *HTTPSessionManager = nil;
  *  @param progress   上传进度
  */
 
-- (void)uploadData:(NSString *)url parameters:(NSDictionary *)parameters data:(NSData *)data fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
+- (void)uploadData:(NSString *)url parameters:(NSDictionary *)parameters datas:(NSArray *)datas fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
     url = [NSString urlEncode:url];
     [self setRequestHeader];
     [self POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        if (data) {
-            [formData appendPartWithFileData:data name:fileKey fileName:fileName mimeType:mimeType];
+        for (int i = 0; i < datas.count; i ++) {
+            NSData *data = datas[i];
+            NSString *file = [NSString stringWithFormat:@"%@_%d",fileName, i];
+            [formData appendPartWithFileData:data name:fileKey fileName:file mimeType:mimeType];
         }
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {
@@ -199,10 +201,13 @@ static ZYHTTPSessionManager *HTTPSessionManager = nil;
 }
 
 - (void)uploadData:(ZYRequest *)request data:(NSData *)data fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void(^)(id response))success failure:(void (^)(NSError *error))failure {
+    if (data == nil) {
+        return;
+    }
     if (request.showLoading) {
         [MBProgressHUD showLoading:request.loadingMessage];
     }
-    [self uploadData:request.url parameters:request.parameters data:data fileKey:fileKey fileName:fileName mimeType:mimeType progress:^(NSProgress *uploadProgress) {
+    [self uploadData:request.url parameters:request.parameters datas:@[data] fileKey:fileKey fileName:fileName mimeType:mimeType progress:^(NSProgress *uploadProgress) {
         progress(uploadProgress);
     } success:^(id response) {
         if (request.showLoading) {
@@ -218,10 +223,13 @@ static ZYHTTPSessionManager *HTTPSessionManager = nil;
 }
 
 - (void)uploadData:(ZYRequest *)request responseClass:(Class)clazz data:(NSData *)data fileKey:(NSString *)fileKey fileName:(NSString *)fileName mimeType:(NSString *)mimeType progress:(void (^)(NSProgress *uploadProgress))progress success:(void(^)(ZYResponse *response))success failure:(void (^)(NSError *error))failure {
+    if (data == nil) {
+        return;
+    }
     if (request.showLoading) {
         [MBProgressHUD showLoading:request.loadingMessage];
     }
-    [self uploadData:request.url parameters:request.parameters data:data fileKey:fileKey fileName:fileName mimeType:mimeType progress:^(NSProgress *uploadProgress) {
+    [self uploadData:request.url parameters:request.parameters datas:@[data] fileKey:fileKey fileName:fileName mimeType:mimeType progress:^(NSProgress *uploadProgress) {
         progress(uploadProgress);
     } success:^(id response) {
         if (request.showLoading) {
@@ -253,7 +261,7 @@ static ZYHTTPSessionManager *HTTPSessionManager = nil;
 - (void)uploadImage:(UIImage *)image url:(NSString *)url parameters:(NSDictionary *)parameters fileKey:(NSString *)fileKey fileName:(NSString *)fileName progerss:(void (^)(NSProgress *progressValue))progress success:(void (^)(id response))success failure:(void (^)(NSError *error))failure {
     NSData *data = UIImageJPEGRepresentation(image, 1);
     // 开始post请求上传图像文件
-    [self uploadData:url parameters:parameters data:data fileKey:fileKey fileName:fileName mimeType:@"image/jpeg" progress:progress success:success failure:failure];
+    [self uploadData:url parameters:parameters datas:@[data] fileKey:fileKey fileName:fileName mimeType:@"image/jpeg" progress:progress success:success failure:failure];
 }
 
 - (void)uploadImage:(ZYRequest *)request image:(UIImage *)image fileKey:(NSString *)fileKey fileName:(NSString *)fileName progerss:(void (^)(NSProgress *progressValue))progress success:(void(^)(id response))success failure:(void (^)(NSError *error))failure {

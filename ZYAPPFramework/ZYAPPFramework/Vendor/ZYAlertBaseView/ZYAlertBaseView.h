@@ -39,6 +39,7 @@ typedef enum : NSUInteger {
 
 /// 动画消失 不从父视图移除
 - (void)hiddenView;
+/// 动画消失 不从父视图移除
 - (void)hiddenViewCompletion:(void(^ __nullable)(void))completion;
 
 /// 动画消失 从父视图移除

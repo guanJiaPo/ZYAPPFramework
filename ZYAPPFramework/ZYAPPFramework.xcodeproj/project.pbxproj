@@ -11,6 +11,7 @@
 		391C1B9C223A5A730044ECAF /* UIImage+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B94223A5A730044ECAF /* UIImage+JMRadius.m */; };
 		391C1B9D223A5A730044ECAF /* UIButton+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B95223A5A730044ECAF /* UIButton+JMRadius.m */; };
 		391C1B9E223A5A730044ECAF /* UIView+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B96223A5A730044ECAF /* UIView+JMRadius.m */; };
+		399B45B222F02A9400D0F57B /* ZYCardNoFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 399B45B122F02A9400D0F57B /* ZYCardNoFormatter.m */; };
 		44861C77EDF6EEB6895C2F0F /* libPods-ZYAPPFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE2700B6C2C71735CAE4D88 /* libPods-ZYAPPFramework.a */; };
 		510263842201411F00851165 /* NSObject+ZYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 510263832201411F00851165 /* NSObject+ZYCategory.m */; };
 		5102638A2201901D00851165 /* MBProgressHUD+ZYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 510263892201901D00851165 /* MBProgressHUD+ZYCategory.m */; };
@@ -118,6 +119,8 @@
 		391C1B98223A5A730044ECAF /* UIImage+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JMRadius.h"; sourceTree = "<group>"; };
 		391C1B99223A5A730044ECAF /* UIView+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMRadius.h"; sourceTree = "<group>"; };
 		391C1B9A223A5A730044ECAF /* UIButton+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JMRadius.h"; sourceTree = "<group>"; };
+		399B45B022F02A9400D0F57B /* ZYCardNoFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYCardNoFormatter.h; sourceTree = "<group>"; };
+		399B45B122F02A9400D0F57B /* ZYCardNoFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYCardNoFormatter.m; sourceTree = "<group>"; };
 		45345E9D679C79D729C10C93 /* Pods-ZYAPPFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYAPPFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYAPPFrameworkTests/Pods-ZYAPPFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		510263822201411F00851165 /* NSObject+ZYCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZYCategory.h"; sourceTree = "<group>"; };
 		510263832201411F00851165 /* NSObject+ZYCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZYCategory.m"; sourceTree = "<group>"; };
@@ -327,6 +330,15 @@
 				391C1B92223A5A730044ECAF /* UIImageView+JMRadius.m */,
 			);
 			path = JMRoundedCorner1.9.6;
+			sourceTree = "<group>";
+		};
+		399B45AF22F02A7D00D0F57B /* ZYCardNoFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				399B45B022F02A9400D0F57B /* ZYCardNoFormatter.h */,
+				399B45B122F02A9400D0F57B /* ZYCardNoFormatter.m */,
+			);
+			path = ZYCardNoFormatter;
 			sourceTree = "<group>";
 		};
 		4BAE3679655D6A44AF95C1F4 /* Frameworks */ = {
@@ -626,6 +638,7 @@
 		5119892521F5B94D00130E4F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				399B45AF22F02A7D00D0F57B /* ZYCardNoFormatter */,
 				391C1B91223A5A730044ECAF /* JMRoundedCorner1.9.6 */,
 				5119894821F5C6ED00130E4F /* DXPopover */,
 				5119894521F5C6ED00130E4F /* FDFullscreenPopGesture */,
@@ -1082,6 +1095,7 @@
 				511989C221F5C6EE00130E4F /* ZYEmptyView.m in Sources */,
 				511989BD21F5C6EE00130E4F /* ZYEmptyCollectionCell.m in Sources */,
 				5119893621F5C6AD00130E4F /* ZYRequest.m in Sources */,
+				399B45B222F02A9400D0F57B /* ZYCardNoFormatter.m in Sources */,
 				510263842201411F00851165 /* NSObject+ZYCategory.m in Sources */,
 				511989AA21F5C6EE00130E4F /* DXPopover.m in Sources */,
 				511989BC21F5C6EE00130E4F /* ZYEyptyTableCell.m in Sources */,
