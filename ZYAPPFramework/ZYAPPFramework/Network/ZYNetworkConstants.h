@@ -25,7 +25,10 @@ static NSString *const kNetWorkDomain_dis = @"";
 
 #import "ZYRequest.h"
 #import "ZYResponse.h"
-#import "ZYHTTPSessionManager.h"
+#import "ZYHTTPManager.h"
+#import "ZYNetworkManager.h"
+
+//日后删除，使用ZYNetworkManager替代
 #import "ZYURLSessionManager.h"
 
 #endif /* ZYNetworkConstants_h */

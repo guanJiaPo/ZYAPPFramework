@@ -11,6 +11,19 @@
 		391C1B9C223A5A730044ECAF /* UIImage+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B94223A5A730044ECAF /* UIImage+JMRadius.m */; };
 		391C1B9D223A5A730044ECAF /* UIButton+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B95223A5A730044ECAF /* UIButton+JMRadius.m */; };
 		391C1B9E223A5A730044ECAF /* UIView+JMRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 391C1B96223A5A730044ECAF /* UIView+JMRadius.m */; };
+		395C42B4250C86070089B0B7 /* QFTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C429F250C86070089B0B7 /* QFTimePickerView.m */; };
+		395C42B5250C86070089B0B7 /* QFDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42A2250C86070089B0B7 /* QFDatePickerView.m */; };
+		395C42B6250C86070089B0B7 /* QFTimerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42A7250C86070089B0B7 /* QFTimerPicker.m */; };
+		395C42B7250C86070089B0B7 /* QFTimerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42A9250C86070089B0B7 /* QFTimerUtil.m */; };
+		395C42B8250C86070089B0B7 /* QFTimerDataSourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42B0250C86070089B0B7 /* QFTimerDataSourceModel.m */; };
+		395C42B9250C86070089B0B7 /* QFMinuteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42B1250C86070089B0B7 /* QFMinuteModel.m */; };
+		395C42BA250C86070089B0B7 /* QFHourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42B2250C86070089B0B7 /* QFHourModel.m */; };
+		395C42BB250C86070089B0B7 /* QFDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42B3250C86070089B0B7 /* QFDateModel.m */; };
+		395C42DE250C864D0089B0B7 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C42DC250C864D0089B0B7 /* SPPageMenu.m */; };
+		395C4342250E1A710089B0B7 /* ZYResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C433C250E1A700089B0B7 /* ZYResponse.m */; };
+		395C4343250E1A710089B0B7 /* ZYNetworkManager+ZYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C433E250E1A700089B0B7 /* ZYNetworkManager+ZYCategory.m */; };
+		395C4344250E1A710089B0B7 /* ZYHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C433F250E1A700089B0B7 /* ZYHTTPManager.m */; };
+		395C4345250E1A710089B0B7 /* ZYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C4341250E1A710089B0B7 /* ZYNetworkManager.m */; };
 		399B45B222F02A9400D0F57B /* ZYCardNoFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 399B45B122F02A9400D0F57B /* ZYCardNoFormatter.m */; };
 		44861C77EDF6EEB6895C2F0F /* libPods-ZYAPPFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE2700B6C2C71735CAE4D88 /* libPods-ZYAPPFramework.a */; };
 		510263842201411F00851165 /* NSObject+ZYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 510263832201411F00851165 /* NSObject+ZYCategory.m */; };
@@ -27,9 +40,7 @@
 		511988F621F5B55300130E4F /* ZYAPPFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 511988F521F5B55300130E4F /* ZYAPPFrameworkUITests.m */; };
 		5119892B21F5BAEC00130E4F /* ZYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119892A21F5BAEC00130E4F /* ZYUser.m */; };
 		5119893621F5C6AD00130E4F /* ZYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119892D21F5C6AC00130E4F /* ZYRequest.m */; };
-		5119893721F5C6AD00130E4F /* ZYResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119892F21F5C6AD00130E4F /* ZYResponse.m */; };
 		5119893821F5C6AD00130E4F /* ZYURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119893121F5C6AD00130E4F /* ZYURLSessionManager.m */; };
-		5119893921F5C6AD00130E4F /* ZYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119893521F5C6AD00130E4F /* ZYHTTPSessionManager.m */; };
 		5119893E21F5C6BE00130E4F /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119893A21F5C6BE00130E4F /* JKDBModel.m */; };
 		5119893F21F5C6BE00130E4F /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119893B21F5C6BE00130E4F /* JKDBHelper.m */; };
 		511989A721F5C6EE00130E4F /* ZYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119894221F5C6ED00130E4F /* ZYWebViewController.m */; };
@@ -119,6 +130,32 @@
 		391C1B98223A5A730044ECAF /* UIImage+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JMRadius.h"; sourceTree = "<group>"; };
 		391C1B99223A5A730044ECAF /* UIView+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMRadius.h"; sourceTree = "<group>"; };
 		391C1B9A223A5A730044ECAF /* UIButton+JMRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JMRadius.h"; sourceTree = "<group>"; };
+		395C429F250C86070089B0B7 /* QFTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTimePickerView.m; sourceTree = "<group>"; };
+		395C42A0250C86070089B0B7 /* QFTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTimePickerView.h; sourceTree = "<group>"; };
+		395C42A2250C86070089B0B7 /* QFDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFDatePickerView.m; sourceTree = "<group>"; };
+		395C42A3250C86070089B0B7 /* QFDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFDatePickerView.h; sourceTree = "<group>"; };
+		395C42A6250C86070089B0B7 /* QFTimerPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTimerPicker.h; sourceTree = "<group>"; };
+		395C42A7250C86070089B0B7 /* QFTimerPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTimerPicker.m; sourceTree = "<group>"; };
+		395C42A9250C86070089B0B7 /* QFTimerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTimerUtil.m; sourceTree = "<group>"; };
+		395C42AA250C86070089B0B7 /* QFTimerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTimerUtil.h; sourceTree = "<group>"; };
+		395C42AC250C86070089B0B7 /* QFTimerDataSourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTimerDataSourceModel.h; sourceTree = "<group>"; };
+		395C42AD250C86070089B0B7 /* QFDateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFDateModel.h; sourceTree = "<group>"; };
+		395C42AE250C86070089B0B7 /* QFHourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFHourModel.h; sourceTree = "<group>"; };
+		395C42AF250C86070089B0B7 /* QFMinuteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFMinuteModel.h; sourceTree = "<group>"; };
+		395C42B0250C86070089B0B7 /* QFTimerDataSourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTimerDataSourceModel.m; sourceTree = "<group>"; };
+		395C42B1250C86070089B0B7 /* QFMinuteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFMinuteModel.m; sourceTree = "<group>"; };
+		395C42B2250C86070089B0B7 /* QFHourModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFHourModel.m; sourceTree = "<group>"; };
+		395C42B3250C86070089B0B7 /* QFDateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFDateModel.m; sourceTree = "<group>"; };
+		395C42DC250C864D0089B0B7 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
+		395C42DD250C864D0089B0B7 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
+		395C433A250E1A700089B0B7 /* ZYNetworkManager+ZYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYNetworkManager+ZYCategory.h"; sourceTree = "<group>"; };
+		395C433B250E1A700089B0B7 /* ZYResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYResponse.h; sourceTree = "<group>"; };
+		395C433C250E1A700089B0B7 /* ZYResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYResponse.m; sourceTree = "<group>"; };
+		395C433D250E1A700089B0B7 /* ZYHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYHTTPManager.h; sourceTree = "<group>"; };
+		395C433E250E1A700089B0B7 /* ZYNetworkManager+ZYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYNetworkManager+ZYCategory.m"; sourceTree = "<group>"; };
+		395C433F250E1A700089B0B7 /* ZYHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYHTTPManager.m; sourceTree = "<group>"; };
+		395C4340250E1A700089B0B7 /* ZYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYNetworkManager.h; sourceTree = "<group>"; };
+		395C4341250E1A710089B0B7 /* ZYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYNetworkManager.m; sourceTree = "<group>"; };
 		399B45B022F02A9400D0F57B /* ZYCardNoFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYCardNoFormatter.h; sourceTree = "<group>"; };
 		399B45B122F02A9400D0F57B /* ZYCardNoFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYCardNoFormatter.m; sourceTree = "<group>"; };
 		45345E9D679C79D729C10C93 /* Pods-ZYAPPFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYAPPFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYAPPFrameworkTests/Pods-ZYAPPFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,12 +190,8 @@
 		5119892C21F5BB0C00130E4F /* ZYFileHeaderConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYFileHeaderConstants.h; sourceTree = "<group>"; };
 		5119892D21F5C6AC00130E4F /* ZYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequest.m; sourceTree = "<group>"; };
 		5119892E21F5C6AD00130E4F /* ZYURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYURLSessionManager.h; sourceTree = "<group>"; };
-		5119892F21F5C6AD00130E4F /* ZYResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYResponse.m; sourceTree = "<group>"; };
 		5119893121F5C6AD00130E4F /* ZYURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYURLSessionManager.m; sourceTree = "<group>"; };
 		5119893221F5C6AD00130E4F /* ZYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequest.h; sourceTree = "<group>"; };
-		5119893321F5C6AD00130E4F /* ZYResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYResponse.h; sourceTree = "<group>"; };
-		5119893421F5C6AD00130E4F /* ZYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYHTTPSessionManager.h; sourceTree = "<group>"; };
-		5119893521F5C6AD00130E4F /* ZYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYHTTPSessionManager.m; sourceTree = "<group>"; };
 		5119893A21F5C6BE00130E4F /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
 		5119893B21F5C6BE00130E4F /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
 		5119893C21F5C6BE00130E4F /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
@@ -330,6 +363,86 @@
 				391C1B92223A5A730044ECAF /* UIImageView+JMRadius.m */,
 			);
 			path = JMRoundedCorner1.9.6;
+			sourceTree = "<group>";
+		};
+		395C429D250C85FD0089B0B7 /* QFDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				395C42A1250C86070089B0B7 /* QFDatePickerView */,
+				395C429E250C86070089B0B7 /* QFTimePickerView */,
+				395C42A4250C86070089B0B7 /* QFTimerPicker */,
+			);
+			path = QFDatePickerView;
+			sourceTree = "<group>";
+		};
+		395C429E250C86070089B0B7 /* QFTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				395C429F250C86070089B0B7 /* QFTimePickerView.m */,
+				395C42A0250C86070089B0B7 /* QFTimePickerView.h */,
+			);
+			path = QFTimePickerView;
+			sourceTree = "<group>";
+		};
+		395C42A1250C86070089B0B7 /* QFDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				395C42A2250C86070089B0B7 /* QFDatePickerView.m */,
+				395C42A3250C86070089B0B7 /* QFDatePickerView.h */,
+			);
+			path = QFDatePickerView;
+			sourceTree = "<group>";
+		};
+		395C42A4250C86070089B0B7 /* QFTimerPicker */ = {
+			isa = PBXGroup;
+			children = (
+				395C42A5250C86070089B0B7 /* QFTimerPicker */,
+				395C42A8250C86070089B0B7 /* Uitils */,
+				395C42AB250C86070089B0B7 /* Model */,
+			);
+			path = QFTimerPicker;
+			sourceTree = "<group>";
+		};
+		395C42A5250C86070089B0B7 /* QFTimerPicker */ = {
+			isa = PBXGroup;
+			children = (
+				395C42A6250C86070089B0B7 /* QFTimerPicker.h */,
+				395C42A7250C86070089B0B7 /* QFTimerPicker.m */,
+			);
+			path = QFTimerPicker;
+			sourceTree = "<group>";
+		};
+		395C42A8250C86070089B0B7 /* Uitils */ = {
+			isa = PBXGroup;
+			children = (
+				395C42A9250C86070089B0B7 /* QFTimerUtil.m */,
+				395C42AA250C86070089B0B7 /* QFTimerUtil.h */,
+			);
+			path = Uitils;
+			sourceTree = "<group>";
+		};
+		395C42AB250C86070089B0B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				395C42AC250C86070089B0B7 /* QFTimerDataSourceModel.h */,
+				395C42AD250C86070089B0B7 /* QFDateModel.h */,
+				395C42AE250C86070089B0B7 /* QFHourModel.h */,
+				395C42AF250C86070089B0B7 /* QFMinuteModel.h */,
+				395C42B0250C86070089B0B7 /* QFTimerDataSourceModel.m */,
+				395C42B1250C86070089B0B7 /* QFMinuteModel.m */,
+				395C42B2250C86070089B0B7 /* QFHourModel.m */,
+				395C42B3250C86070089B0B7 /* QFDateModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		395C42DB250C864D0089B0B7 /* SPPageMenu3.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				395C42DC250C864D0089B0B7 /* SPPageMenu.m */,
+				395C42DD250C864D0089B0B7 /* SPPageMenu.h */,
+			);
+			path = SPPageMenu3.5.0;
 			sourceTree = "<group>";
 		};
 		399B45AF22F02A7D00D0F57B /* ZYCardNoFormatter */ = {
@@ -564,14 +677,18 @@
 		5119892021F5B69400130E4F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				395C433D250E1A700089B0B7 /* ZYHTTPManager.h */,
+				395C433F250E1A700089B0B7 /* ZYHTTPManager.m */,
+				395C4340250E1A700089B0B7 /* ZYNetworkManager.h */,
+				395C4341250E1A710089B0B7 /* ZYNetworkManager.m */,
+				395C433A250E1A700089B0B7 /* ZYNetworkManager+ZYCategory.h */,
+				395C433E250E1A700089B0B7 /* ZYNetworkManager+ZYCategory.m */,
+				395C433B250E1A700089B0B7 /* ZYResponse.h */,
+				395C433C250E1A700089B0B7 /* ZYResponse.m */,
 				5119892E21F5C6AD00130E4F /* ZYURLSessionManager.h */,
 				5119893121F5C6AD00130E4F /* ZYURLSessionManager.m */,
-				5119893421F5C6AD00130E4F /* ZYHTTPSessionManager.h */,
-				5119893521F5C6AD00130E4F /* ZYHTTPSessionManager.m */,
 				5119893221F5C6AD00130E4F /* ZYRequest.h */,
 				5119892D21F5C6AC00130E4F /* ZYRequest.m */,
-				5119893321F5C6AD00130E4F /* ZYResponse.h */,
-				5119892F21F5C6AD00130E4F /* ZYResponse.m */,
 				510263942201B43C00851165 /* ZYNetworkConstants.h */,
 			);
 			path = Network;
@@ -638,6 +755,8 @@
 		5119892521F5B94D00130E4F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				395C42DB250C864D0089B0B7 /* SPPageMenu3.5.0 */,
+				395C429D250C85FD0089B0B7 /* QFDatePickerView */,
 				399B45AF22F02A7D00D0F57B /* ZYCardNoFormatter */,
 				391C1B91223A5A730044ECAF /* JMRoundedCorner1.9.6 */,
 				5119894821F5C6ED00130E4F /* DXPopover */,
@@ -1095,6 +1214,7 @@
 				511989C221F5C6EE00130E4F /* ZYEmptyView.m in Sources */,
 				511989BD21F5C6EE00130E4F /* ZYEmptyCollectionCell.m in Sources */,
 				5119893621F5C6AD00130E4F /* ZYRequest.m in Sources */,
+				395C42B9250C86070089B0B7 /* QFMinuteModel.m in Sources */,
 				399B45B222F02A9400D0F57B /* ZYCardNoFormatter.m in Sources */,
 				510263842201411F00851165 /* NSObject+ZYCategory.m in Sources */,
 				511989AA21F5C6EE00130E4F /* DXPopover.m in Sources */,
@@ -1104,8 +1224,12 @@
 				5119892B21F5BAEC00130E4F /* ZYUser.m in Sources */,
 				391C1B9C223A5A730044ECAF /* UIImage+JMRadius.m in Sources */,
 				5119893821F5C6AD00130E4F /* ZYURLSessionManager.m in Sources */,
+				395C42BB250C86070089B0B7 /* QFDateModel.m in Sources */,
+				395C4343250E1A710089B0B7 /* ZYNetworkManager+ZYCategory.m in Sources */,
 				511989B521F5C6EE00130E4F /* TZImageManager.m in Sources */,
 				511988E121F5B55200130E4F /* main.m in Sources */,
+				395C42B5250C86070089B0B7 /* QFDatePickerView.m in Sources */,
+				395C42DE250C864D0089B0B7 /* SPPageMenu.m in Sources */,
 				511989C621F5C6EE00130E4F /* RDVTabBarController.m in Sources */,
 				5119893E21F5C6BE00130E4F /* JKDBModel.m in Sources */,
 				511989CA21F5C6EE00130E4F /* VTMagicController.m in Sources */,
@@ -1113,8 +1237,10 @@
 				511989B621F5C6EE00130E4F /* TZPhotoPickerController.m in Sources */,
 				511989AF21F5C6EE00130E4F /* TZAssetModel.m in Sources */,
 				511989AE21F5C6EE00130E4F /* TZVideoPlayerController.m in Sources */,
+				395C42B6250C86070089B0B7 /* QFTimerPicker.m in Sources */,
 				511989C421F5C6EE00130E4F /* MDHTMLLabel.m in Sources */,
 				5102638A2201901D00851165 /* MBProgressHUD+ZYCategory.m in Sources */,
+				395C42B8250C86070089B0B7 /* QFTimerDataSourceModel.m in Sources */,
 				51F5A29B220289EB00DC996E /* UINavigationBar+ZYCategory.m in Sources */,
 				510263922201A1AA00851165 /* ZYProfileController.m in Sources */,
 				511989B221F5C6EE00130E4F /* TZPhotoPreviewController.m in Sources */,
@@ -1123,13 +1249,14 @@
 				511989BB21F5C6EE00130E4F /* TZImageRequestOperation.m in Sources */,
 				51F5A29E2202CFA600DC996E /* UIColor+ZYCategory.m in Sources */,
 				511989C021F5C6EE00130E4F /* UIView+LYExtension.m in Sources */,
+				395C42B4250C86070089B0B7 /* QFTimePickerView.m in Sources */,
 				511989B121F5C6EE00130E4F /* UIView+Layout.m in Sources */,
 				51F5A292220288F400DC996E /* NSDate+ZYCategory.m in Sources */,
 				391C1B9E223A5A730044ECAF /* UIView+JMRadius.m in Sources */,
 				511989BA21F5C6EE00130E4F /* TZGifPhotoPreviewController.m in Sources */,
 				511989B921F5C6EE00130E4F /* TZLocationManager.m in Sources */,
-				5119893921F5C6AD00130E4F /* ZYHTTPSessionManager.m in Sources */,
 				511989DB21F5CB5F00130E4F /* ZYBaseController.m in Sources */,
+				395C42BA250C86070089B0B7 /* QFHourModel.m in Sources */,
 				511989BF21F5C6EE00130E4F /* UIView+Empty.m in Sources */,
 				511989CE21F5C6EE00130E4F /* UIColor+VTMagic.m in Sources */,
 				511988D321F5B55100130E4F /* AppDelegate.m in Sources */,
@@ -1137,11 +1264,13 @@
 				511989C321F5C6EE00130E4F /* InsetsLabel.m in Sources */,
 				511989CD21F5C6EE00130E4F /* UIScrollView+VTMagic.m in Sources */,
 				511989AB21F5C6EE00130E4F /* ZYCycleScrollView.m in Sources */,
-				5119893721F5C6AD00130E4F /* ZYResponse.m in Sources */,
 				511989A821F5C6EE00130E4F /* ZYWebNativeController.m in Sources */,
 				5102638F2201A14700851165 /* ZYHomeController.m in Sources */,
 				511989D021F5C6EE00130E4F /* UIViewController+VTMagic.m in Sources */,
 				511989A721F5C6EE00130E4F /* ZYWebViewController.m in Sources */,
+				395C4342250E1A710089B0B7 /* ZYResponse.m in Sources */,
+				395C4345250E1A710089B0B7 /* ZYNetworkManager.m in Sources */,
+				395C42B7250C86070089B0B7 /* QFTimerUtil.m in Sources */,
 				511989AD21F5C6EE00130E4F /* TZAssetCell.m in Sources */,
 				51F5A2A42202EEF000DC996E /* ZYSystem.m in Sources */,
 				511989A921F5C6EE00130E4F /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -1150,6 +1279,7 @@
 				511989DE21F5CC4100130E4F /* NSString+ZYCategory.m in Sources */,
 				511989B821F5C6EE00130E4F /* TZImagePickerController.m in Sources */,
 				511989D821F5CB4700130E4F /* ZYNavigationController.m in Sources */,
+				395C4344250E1A710089B0B7 /* ZYHTTPManager.m in Sources */,
 				391C1B9B223A5A730044ECAF /* UIImageView+JMRadius.m in Sources */,
 				511989B721F5C6EE00130E4F /* TZPhotoPreviewCell.m in Sources */,
 				51F5A2952202891300DC996E /* UIImage+ZYCategory.m in Sources */,
